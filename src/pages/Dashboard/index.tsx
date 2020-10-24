@@ -24,7 +24,7 @@ import {
 } from './styles';
 
 export interface Provider {
-  id: number;
+  id: string;
   name: string;
   avatar_url: string;
 }
@@ -40,7 +40,6 @@ const Dashboard: React.FC = () => {
       setProviders(response.data);
       console.log(response.data);
     });
-
   }, []);
 
   const navigateToProfile = useCallback(() => {
